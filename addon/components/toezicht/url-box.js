@@ -1,5 +1,5 @@
 import Component from '@ember/component';
-import layout from '../templates/components/url-box';
+import layout from '../../templates/components/toezicht/url-box';
 import { inject as service } from '@ember/service';
 
 export default Component.extend({
