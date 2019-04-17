@@ -3,8 +3,8 @@
     <thead>
       <tr>
         <td colspan="2">
-        	<p><strong>Links naar documenten</strong></p>
-        	{{#unless disabled}}
+          <p><strong>Links naar documenten</strong></p>
+          {{#unless disabled}}
             <p class="small">Enkel links naar specifieke documenten, geen overzichtspagina's.</p>
           {{/unless}}
         </td>
@@ -16,10 +16,10 @@
       {{/each}}
     </tbody>
   </table>
-	{{#unless disabled}}
-	  <button class="button button--tiny js-accordion-bound"
+  {{#unless disabled}}
+    <button class="button button--tiny js-accordion-bound"
 	    {{action "addUrlField"}}>
-	    <i class="vi vi-plus button__icon" aria-hidden="true"></i> Voeg link toe
-	  </button>
-	{{/unless}}
+      <i class="vi vi-plus button__icon" aria-hidden="true"></i> Voeg link toe
+    </button>
+  {{/unless}}
 </div>
