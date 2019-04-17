@@ -1,1 +1,1 @@
-export { default } from 'toezicht-form-fields/components/input-fields/text/show';
+export { default } from '@lblod/ember-toezicht-form-fields/components/input-fields/text/show';

@@ -1,1 +1,1 @@
-export { default } from 'toezicht-form-fields/components/input-fields/toezicht-bestuursorgaan-select/edit';
+export { default } from '@lblod/ember-toezicht-form-fields/components/input-fields/toezicht-bestuursorgaan-select/edit';
