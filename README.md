@@ -1,7 +1,7 @@
 toezicht-form-fields
 ==============================================================================
 
-[Short description of the addon.]
+This addon provides input-field components such as checkbox, date, ... and is primarily made to be used in the toezicht app (https://github.com/lblod/frontend-toezicht-abb) and the loket app (https://github.com/lblod/frontend-loket). This addon also serves toezixht specific component like url-box and url-line.
 
 
 Compatibility
@@ -15,7 +15,7 @@ Installation
 ------------------------------------------------------------------------------
 
 ```
-ember install toezicht-form-fields
+ember install @lblod/ember-toezicht-form-fields
 ```
 
 
