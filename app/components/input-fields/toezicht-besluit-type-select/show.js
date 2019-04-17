@@ -1,0 +1,1 @@
+export { default } from 'toezicht-form-fields/components/input-fields/toezicht-besluit-type-select/show';
