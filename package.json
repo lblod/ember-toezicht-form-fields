@@ -1,13 +1,16 @@
 {
   "name": "@lblod/ember-toezicht-form-fields",
   "version": "0.0.1",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Input fields for forms used in the toezicht app.",
   "keywords": [
     "ember-addon"
   ],
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lblod/ember-toezicht-form-fields"
+  },
   "license": "MIT",
-  "author": "",
+  "author": "redpencil.io",
   "directories": {
     "doc": "doc",
     "test": "tests"
