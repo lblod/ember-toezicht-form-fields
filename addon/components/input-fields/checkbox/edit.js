@@ -1,4 +1,5 @@
 import Component from '@ember/component';
+import { computed }  from '@ember/object';
 import { oneWay } from '@ember/object/computed';
 import layout from '../../../templates/components/input-fields/checkbox/edit';
 
