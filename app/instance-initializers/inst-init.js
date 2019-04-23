@@ -1,0 +1,1 @@
+export { default, initialize } from '@lblod/ember-toezicht-form-fields/instance-initializers/inst-init';
