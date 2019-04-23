@@ -1,6 +1,7 @@
 import Component from '@ember/component';
 import layout from '../../../templates/components/input-fields/toezicht-besluit-type-select/edit';
 import { inject as service } from '@ember/service';
+import { debug } from '@ember/debug';
 import { task, timeout } from 'ember-concurrency';
 import InputField from '@lblod/ember-mu-dynamic-forms/mixins/input-field';
 import { oneWay } from '@ember/object/computed';
@@ -28,8 +29,9 @@ export default Component.extend( InputField, {
 
     if (this.model) {
       if (this.internalValue && this.internalValue.get('isNew')) { // only already existing options are allowed
+        debug(`Reset value of toezicht-besluit-type-select to null. New values are not allowed`);
         this.internalValue.destroyRecord();
-        this.updateValue( this.internalValue );
+        this.updateValue( null );
       }
     }
   },
