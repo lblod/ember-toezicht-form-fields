@@ -1,13 +1,6 @@
-import Component from '@ember/component';
-import { oneWay } from '@ember/object/computed';
-import { computed } from '@ember/object';
 import layout from '../../../templates/components/input-fields/checkbox/show';
+import InputFieldComponent from '@lblod/ember-mu-dynamic-forms/components/input-fields/checkbox/show';
 
-export default Component.extend({
-  layout,
-  internalValue: oneWay('value'),
-
-  activeInputStates: computed( function() {
-    return [];
-  })
+export default InputFieldComponent.extend({
+  layout
 });
