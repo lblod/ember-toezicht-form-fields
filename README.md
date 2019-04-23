@@ -31,7 +31,7 @@ Usage
 
 This addon provides this set of components
 - input-fields
-  These components are extension from the same components in the @lblod/ember-mu-dynamic-forms addon. So, for these components you may refer to the usage instructions of that addon at https://www.npmjs.com/package/@lblod/ember-mu-dynamic-forms.
+  A bunch of these components are extension from the same components in the @lblod/ember-mu-dynamic-forms addon. So, you may refer to the usage instructions of that addon at https://www.npmjs.com/package/@lblod/ember-mu-dynamic-forms.
   - checkbox
   - date
   - dynamic-select
