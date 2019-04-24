@@ -9,7 +9,7 @@ import InputShow from '@lblod/ember-toezicht-form-fields/components/input-fields
 import YearEdit from '@lblod/ember-toezicht-form-fields/components/input-fields/year/edit';
 import YearShow from '@lblod/ember-toezicht-form-fields/components/input-fields/year/show';
 
-export default function registerMe( appInstance ) {
+export default function componentInitializer( appInstance ) {
   appInstance.register('component:input-fields/text/edit', TextEdit);
   appInstance.register('component:input-fields/text/show', TextShow);
 
@@ -24,6 +24,4 @@ export default function registerMe( appInstance ) {
   
   appInstance.register('component:input-fields/year/edit', YearEdit);
   appInstance.register('component:input-fields/year/show', YearShow);
-  
-  return true;
 }
