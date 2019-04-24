@@ -9,9 +9,9 @@ module.exports = {
   //     foo: options.entity.options.foo
   //   };
   // }
+  normalizeEntityName() { },
 
   afterInstall(options) {
   //   // Perform extra work here.
-    debugger;
   }
 };
