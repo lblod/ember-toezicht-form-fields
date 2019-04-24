@@ -24,6 +24,6 @@ export default function registerMe( appInstance ) {
   
   appInstance.register('component:input-fields/year/edit', YearEdit);
   appInstance.register('component:input-fields/year/show', YearShow);
-  debugger;
+  
   return true;
 }
