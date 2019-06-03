@@ -1,11 +1,11 @@
 <div class="form__row u-padding--tb--tinier">
-  <table class="data-table data-table--tight u-spacer--bottom--tiny">
+  <table class="data-table u-spacer--bottom--tiny">
     <thead>
       <tr>
-        <td colspan="2">
-          <p><strong>Links naar documenten</strong></p>
+        <td class="u-padding--tb--small">
+          <p class="u-spacer--bottom--tinier"><strong>Voeg links naar documenten toe</strong> &mdash; aangeraden</p>
           {{#unless disabled}}
-            <p class="small">Enkel links naar specifieke documenten, geen overzichtspagina's.</p>
+          	<p class="small">Enkel links naar specifieke documenten, geen overzichtspagina's.</p>
           {{/unless}}
         </td>
       </tr>
@@ -14,12 +14,22 @@
       {{#each urls as |url|}}
         {{toezicht/url-line url=url editable=(not disabled) onDelete=onDelete}}
       {{/each}}
+		  {{#unless disabled}}
+			  <tr>
+      		<td>
+      			<div class="u-align-center">
+							{{#unless urls as |url|}}
+					     	<p class="u-spacer--tb--tiny">Nog geen links toegevoegd.</p>
+					    {{/unless}}
+					    <button class="button button--small u-spacer--tb--tiny"
+						    {{action "addUrlField"}}>
+					      <i class="vi vi-plus button__icon" aria-hidden="true"></i> Voeg nieuwe link toe
+					    </button>
+						  <p class="smaller u-spacer--tb--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie gedownload van het document dat op de link te vinden is.</p>
+						</div>
+					</td>
+	      </tr>
+		  {{/unless}}
     </tbody>
   </table>
-  {{#unless disabled}}
-    <button class="button button--tiny js-accordion-bound"
-	    {{action "addUrlField"}}>
-      <i class="vi vi-plus button__icon" aria-hidden="true"></i> Voeg link toe
-    </button>
-  {{/unless}}
 </div>

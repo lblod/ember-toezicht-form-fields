@@ -6,15 +6,13 @@
     value=url.address
     disabled=(not editable)
   }}
-  {{#if url.replicatedFile.downloadLink}}
-    <a href={{url.replicatedFile.downloadLink}} download><p>Download archiefbestand</p></a>
-  {{/if}}
-  <a href={{url.address}} target="_blank" rel="noopener"><p>Ga naar originele URL</p></a>
+  <div class="button-group u-spacer--top--tiny">
+	  <a href={{url.address}} target="_blank" rel="noopener" class="u-spacer--bottom--tiny button button--small button--alt"><i class="vi vi-external"></i>Bekijk link</a>
+		{{#if url.replicatedFile.downloadLink}}
+			<a href={{url.replicatedFile.downloadLink}} download class="u-spacer--bottom--tiny button button--small button--alt"><i class="vi vi-document-small"></i>Download ingezonden document<sup>*</sup></a>
+		{{/if}}
+		{{#if editable}}
+			<a class="toggle u-spacer--bottom--tiny button button--small button--alt button--alt--warning" {{action "delete" url}} role="button"><i class="vi vi-cross vi-u-xs"></i>Verwijder&nbsp;link</a>
+		{{/if}}
+	</div>
 </td>
-{{#if editable}}
-  <td class="u-align-right">
-    <a class="toggle js-accordion__toggle small link--icon u-spacer--bottom--small js-accordion-bound" {{action "delete" url}} role="button">
-      Verwijder&nbsp;link
-    </a>
-  </td>
-{{/if}}
