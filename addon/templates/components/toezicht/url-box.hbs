@@ -3,10 +3,7 @@
     <thead>
       <tr>
         <td class="u-padding--tb--small">
-          <p class="u-spacer--bottom--tinier"><strong>Voeg links naar documenten toe</strong> &mdash; aangeraden</p>
-          {{#unless disabled}}
-          	<p class="small">Enkel links naar specifieke documenten, geen overzichtspagina's.</p>
-          {{/unless}}
+          <p><strong>Voeg links naar documenten toe</strong> &mdash; aangewezen methode</p>
         </td>
       </tr>
     </thead>
@@ -25,11 +22,17 @@
 						    {{action "addUrlField"}}>
 					      <i class="vi vi-plus button__icon" aria-hidden="true"></i> Voeg nieuwe link toe
 					    </button>
-						  <p class="smaller u-spacer--tb--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie gedownload van het document dat op de link te vinden is.</p>
+							<div>
+							  <p class="smaller u-spacer--top--tiny">Enkel links naar specifieke documenten, geen overzichtspagina's.</p>
+							  <p class="smaller u-spacer--bottom--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie gedownload van de pagina die op de link te vinden is.</p>
+							</div>
 						</div>
 					</td>
 	      </tr>
 		  {{/unless}}
     </tbody>
   </table>
+    {{#if disabled}}
+			<p class="smallest u-spacer--bottom--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie gedownload van de pagina die op de link te vinden is.</p>
+	  {{/if}}
 </div>
