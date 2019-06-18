@@ -45,7 +45,7 @@ export default Component.extend( InputField, {
       page: { size: 200 },
       include: 'classificatie',
       'filter[bestuurseenheid][id]': bestuurseenheid.get('id'),
-      'filter[heeft-tijdsspecialisaties][:has:bevat]': true
+      'filter[heeft-tijdsspecialisaties][:has-no:bevat-bestuursfunctie]': true
     };
 
     if (searchData)
