@@ -5,6 +5,7 @@
     name="URL-besluit-URL"
     value=url.address
     disabled=(not editable)
+    focus-out=(action "trimUrl")
   }}
   <div class="button-group u-spacer--top--tiny">
 	  <a href={{url.address}} target="_blank" rel="noopener" class="u-spacer--bottom--tiny button button--small button--alt"><i class="vi vi-external"></i>Bekijk link</a>

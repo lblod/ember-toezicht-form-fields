@@ -8,6 +8,11 @@ export default Component.extend({
     delete(address){
       this.onDelete(address);
     },
+    trimUrl() {
+      if(this.url.address) {
+        this.url.set('address', this.url.address.trim());
+      }
+    }
   }
 });
 
