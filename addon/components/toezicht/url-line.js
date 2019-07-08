@@ -12,11 +12,6 @@ export default Component.extend({
       if(this.url.address) {
         this.url.set('address', this.url.address.trim());
       }
-    },
-    trimUrlStart() {
-      if(this.url.address) {
-        this.url.set('address', this.url.address.trimStart());
-      }
     }
   }
 });
