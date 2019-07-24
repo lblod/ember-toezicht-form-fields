@@ -1,0 +1,24 @@
+<div class="form__row u-padding--tb--tinier">
+  <table class="data-table u-spacer--bottom--tiny">
+    <tbody data-test-mn="url-box-list">
+      {{#each fileAddresses as |fileAddress|}}
+        <tr>
+          <td>
+            {{input
+            class="input-field input-field--block input-field--small"
+            value=fileAddress.address
+            disabled=true
+          }}
+            <div class="button-group u-spacer--top--tiny">
+              <a href={{fileAddress.address}} target="_blank" rel="noopener" class="u-spacer--bottom--tiny button button--small button--alt"><i class="vi vi-external"></i>Bekijk link</a>
+              {{#if fileAddress.replicatedFile.downloadLink}}
+                <a href={{fileAddress.replicatedFile.downloadLink}} download class="u-spacer--bottom--tiny button button--small button--alt"><i class="vi vi-document-small"></i>Download opgeslagen pagina<sup>*</sup></a>
+              {{/if}}
+            </div>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <p class="smallest u-spacer--bottom--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie gedownload van de pagina die op de link te vinden is.</p>
+</div>

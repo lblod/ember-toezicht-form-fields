@@ -1,1 +1,0 @@
-export { default } from '@lblod/ember-toezicht-form-fields/components/toezicht/url-line';
