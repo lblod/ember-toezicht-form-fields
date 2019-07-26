@@ -1,0 +1,10 @@
+<div class="u-padding--round--small">
+  <div class="form__row u-spacer--bottom--small">
+    {{#each files as |file|}}
+      {{vo-mu-file-card file=file active=false}}
+    {{/each}}
+    {{#unless files}}
+      <p class="u-spacer--tb--tiny">Geen bestanden.</p>
+    {{/unless}}
+  </div>
+</div>

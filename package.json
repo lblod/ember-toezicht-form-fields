@@ -30,6 +30,7 @@
   "devDependencies": {
     "@ember/optional-features": "^0.6.3",
     "@lblod/ember-mu-dynamic-forms": "^0.3.4",
+    "@lblod/ember-vo-mu-file-upload": "^0.4.1",
     "broccoli-asset-rev": "^2.7.0",
     "ember-cli": "~3.9.0",
     "ember-cli-dependency-checker": "^3.1.0",
