@@ -10,6 +10,9 @@
             value=fileAddress.address
             focus-out=(action "updateFileAddresses")
           }}
+          {{#unless fileAddress.isValidAddress}}
+            Geen geldige URL.
+          {{/unless}}
             <div class="button-group u-spacer--top--tiny">
               <a href={{fileAddress.address}} target="_blank" rel="noopener" class="u-spacer--bottom--tiny button button--small button--alt"><i class="vi vi-external"></i>Bekijk link</a>
               {{#if fileAddress.replicatedFile.downloadLink}}
