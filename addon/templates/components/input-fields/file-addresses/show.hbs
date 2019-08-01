@@ -20,5 +20,9 @@
       {{/each}}
     </tbody>
   </table>
-  <p class="smallest u-spacer--bottom--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie gedownload van de pagina die op de link te vinden is.</p>
+  {{#if fileAddresses.length}}
+	  <p class="smallest u-spacer--bottom--tiny"><sup>*</sup>Op het moment van versturen, wordt er een versie gedownload van de pagina die op de link te vinden is.</p>
+	{{else}}
+		<p class="small u-spacer--bottom--tiny text-fade">Er werden geen links toegevoegd.</p>
+	{{/if}}
 </div>

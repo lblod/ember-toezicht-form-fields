@@ -1,12 +1,6 @@
-<div class="u-padding--round--small">
-  <div class="form__row u-spacer--bottom--small">
-    {{#each files as |file|}}
-      {{vo-mu-file-card file=file onDelete=(action "deleteFile")}}
-    {{/each}}
-
-    <div class="u-spacer--bottom--tiny">
-      <label class="form__label small">Laad de bestanden op</label>
-    </div>
-    {{vo-mu-file-dropzone onFinishUpload=(action "addFile") maxFileSizeMB=1024}}
-  </div>
+<div class="form__row u-spacer--tb--tiny">
+  {{#each files as |file|}}
+    {{vo-mu-file-card file=file onDelete=(action "deleteFile")}}
+  {{/each}}
+  {{vo-mu-file-dropzone onFinishUpload=(action "addFile") maxFileSizeMB=1024}}
 </div>
