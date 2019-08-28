@@ -1,6 +1,6 @@
 {
   "name": "@lblod/ember-toezicht-form-fields",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "Input fields for forms used in the toezicht app.",
   "keywords": [
     "ember-addon"
