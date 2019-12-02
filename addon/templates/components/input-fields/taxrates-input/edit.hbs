@@ -51,17 +51,17 @@
       </tr>
     {{/each}}
     <tr>
-    	<td colspan="5" class="data-table__add-row u-align-center">
-		    {{#unless taxRates}}
-					<a class="button button--narrow u-spacer--tb--small" {{action "create"}} role="button">
-						<i class="vi vi-plus" aria-hidden="true"></i>Voeg aanslagvoet toe
-					</a>
-				{{else}}
-					<a class="button button--narrow button--alt u-spacer--tb--tiny" {{action "create"}} role="button">
-						<i class="vi vi-plus" aria-hidden="true"></i>Voeg aanslagvoet toe
-					</a>
-		    {{/unless}}
-    	</td>
+      <td colspan="5" class="data-table__add-row u-align-center">
+        {{#unless taxRates}}
+          <a class="button button--narrow u-spacer--tb--small" {{action "create"}} role="button">
+            <i class="vi vi-plus" aria-hidden="true"></i>Voeg aanslagvoet toe
+          </a>
+        {{else}}
+          <a class="button button--narrow button--alt u-spacer--tb--tiny" {{action "create"}} role="button">
+            <i class="vi vi-plus" aria-hidden="true"></i>Voeg aanslagvoet toe
+          </a>
+        {{/unless}}
+      </td>
     </tr>
   </tbody>
 </table>
