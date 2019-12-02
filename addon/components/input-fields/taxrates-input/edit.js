@@ -4,18 +4,12 @@ import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { A } from '@ember/array';
 import InputField from '@lblod/ember-mu-dynamic-forms/mixins/input-field';
+import { oneWay } from '@ember/object/computed';
 
 export default Component.extend( InputField, {
   layout,
   store: service(),
-  didReceiveAttrs() {
-    this._super(...arguments);
-    this.set('taxRates', A());
-    if (this.model) {
-      const value = this.get(`solution.${this.get('model.identifier')}`);
-      this.set('taxRates', value || A());
-    }
-  },
+  taxRates: oneWay('value'),
 
   activeInputStates: computed( 'inputStates.[]', 'value', function() {
     const inputStates = this.inputStates;
@@ -35,7 +29,7 @@ export default Component.extend( InputField, {
 
   actions: {
     async create(){
-      let taxRate =this.store.createRecord('tax-rate');
+      let taxRate = this.store.createRecord('tax-rate');
       await taxRate.save();
       this.taxRates.pushObject(taxRate);
     },
