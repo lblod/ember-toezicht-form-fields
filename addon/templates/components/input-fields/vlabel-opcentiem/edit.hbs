@@ -1,58 +1,63 @@
-{{#unless hasSimplifiedTaxRates}}
-<div class="form__row form__row--checkbox">
-  <div class="form__label">
-    <label class="form__label" form="orgaan">Vink aan indien er sprake is van differentiatie</label>
+{{#if showDifferentiatie }}
+  <div class="form__row form__row--checkbox">
+    <div class="form__label">
+      <label class="form__label" form="orgaan">Vink aan indien er sprake is van differentiatie</label>
+    </div>
+    {{wu-checkbox checked=differentiatie onClick=(action "toggleValue")}}
   </div>
-  {{wu-checkbox checked=differentiatie mouseUp=(action "toggleValue")}}
-</div>
 {{else}}
-Er kan geen sprake zijn van differentiatie wanneer er bedragen worden ingevuld. <br/>
-Klik verwijder als u dat wel wenst in te geven.
-{{/unless}}
+  Er kan geen sprake zijn van differentiatie wanneer er bedragen worden ingevuld. <br/>
+  Klik 'verwijder' als u deze wel wenst in te geven.
+{{/if}}
 
-{{#unless this.differentiatie}}
-  <table class="data-table data-table--zebra data-table--tight u-spacer--tb--small">
-    <thead>
-      <tr>
-        <th>Bedrag</th>
-        <th>&nbsp;</th>
-      </tr>
-    </thead>
-    <tbody>
+<table class="data-table data-table--zebra data-table--tight u-spacer--tb--small">
+  <thead>
+    <tr>
+      <th>Bedrag</th>
+      <th>&nbsp;</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#if showTable}}
       {{#each taxRates as |taxRate|}}
-        <tr>
-          <td>
-            {{input
-              class="input-field input-field--block input-field--small"
-              value=taxRate.amount
-              onchange=(mut taxRate.amount)
-              placeholder="Bedrag"
-            }}
-          </td>
-          <td>
-            <a class="toggle small link--icon u-spacer--bottom--small" {{action "delete" taxRate}} role="button">
-              Verwijder
-            </a>
-          </td>
-        </tr>
-      {{/each}}
       <tr>
-        <td colspan="5" class="data-table__add-row u-align-center">
-          {{#unless taxRates}}
-            <a class="button button--narrow u-spacer--tb--small" {{action "create"}} role="button">
-              <i class="vi vi-plus" aria-hidden="true"></i>Voeg bedrag opcentiem toe
-            </a>
-        {{else}}
-            <a class="button button--narrow button--alt u-spacer--tb--tiny" {{action "create"}} role="button">
-              <i class="vi vi-plus" aria-hidden="true"></i>Voeg bedrag opcentiem toe
-            </a>
-          {{/unless}}
+        <td>
+          {{input
+            class="input-field input-field--block input-field--small"
+            value=taxRate.amount
+            onchange=(mut taxRate.amount)
+            placeholder="Bedrag"
+          }}
+        </td>
+        <td>
+          <a class="toggle small link--icon u-spacer--bottom--small" {{action "delete" taxRate}} role="button">
+            Verwijder
+          </a>
         </td>
       </tr>
-    </tbody>
-  </table>
-{{else}}
-Indien er sprake is van differentiatie, hoeft het bedrag niet ingevuld te worden.
-{{/unless}}
+    {{/each}}
+    <tr>
+      <td colspan="5" class="data-table__add-row u-align-center">
+        {{#unless taxRates}}
+          <a class="button button--narrow u-spacer--tb--small" {{action "create"}} role="button">
+            <i class="vi vi-plus" aria-hidden="true"></i>Voeg bedrag opcentiem toe
+          </a>
+        {{else}}
+          <a class="button button--narrow button--alt u-spacer--tb--tiny" {{action "create"}} role="button">
+            <i class="vi vi-plus" aria-hidden="true"></i>Voeg bedrag opcentiem toe
+          </a>
+        {{/unless}}
+      </td>
+    </tr>
+    {{else}}
+    <tr>
+      <td colspan="5" class="data-table__add-row u-align-center">
+        Indien er sprake is van differentiatie, hoeft het bedrag niet ingevuld te worden.
+      </td>
+    </tr>
+    {{/if}}
+  </tbody>
+</table>
+
 
 {{yield}}
