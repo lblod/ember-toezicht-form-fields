@@ -4,7 +4,7 @@ import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { A } from '@ember/array';
 import InputField from '@lblod/ember-mu-dynamic-forms/mixins/input-field';
-import { oneWay, reads, empty} from '@ember/object/computed';
+import { oneWay, reads, empty, not} from '@ember/object/computed';
 
 export default Component.extend(InputField, {
   layout,
@@ -12,14 +12,9 @@ export default Component.extend(InputField, {
   taxRates: oneWay('value'),
   inzendingVoorToezicht: reads('solution.inzendingVoorToezicht'),
   differentiatie: reads('inzendingVoorToezicht.hasExtraTaxRates'),
-  differentiatieEmpty: empty('differentiatie'),
   taxRatesEmpty: empty('taxRates'),
 
-  showTable: computed('differentiatieEmpty', 'differentiatie', function(){
-    if(this.differentiatieEmpty) return true;
-    if(this.differentiatie) return false;
-    return true;
-  }),
+  showTable: not('differentiatie'),
   showDifferentiatie: reads('taxRatesEmpty'),
 
   activeInputStates: computed( 'inputStates.[]', 'value', function() {
