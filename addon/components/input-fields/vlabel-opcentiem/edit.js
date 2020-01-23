@@ -4,7 +4,7 @@ import { computed } from '@ember/object';
 import { inject as service } from '@ember/service';
 import { A } from '@ember/array';
 import InputField from '@lblod/ember-mu-dynamic-forms/mixins/input-field';
-import { oneWay, reads, notEmpty, empty, not, or } from '@ember/object/computed';
+import { oneWay, reads, empty} from '@ember/object/computed';
 
 export default Component.extend(InputField, {
   layout,
