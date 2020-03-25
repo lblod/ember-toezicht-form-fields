@@ -1,0 +1,12 @@
+<AuLabel {{did-insert this.loadData}}>{{@field.label}}</AuLabel>
+{{#each this.files as |file|}}
+  <VoMuFileCard @file={{file}} @onDelete={{this.removeFile}}/>
+{{/each}}
+<VoMuFileDropzone @onFinishUpload={{this.addFile}} @maxFileSizeMB="1024"/>
+{{#if this.errors}}
+  <WuAlert isError={{true}}>
+    {{#each this.errors as |error|}}
+      <li>{{error.resultMessage}}</li>
+    {{/each}}
+  </WuAlert>
+{{/if}}
