@@ -1,5 +1,5 @@
-import Component from '@ember/component';
 import layout from '../../../templates/components/input-fields/date/edit';
+import Component from '@ember/component';
 import { oneWay } from '@ember/object/computed';
 import { observer } from '@ember/object';
 import InputField from '@lblod/ember-mu-dynamic-forms/mixins/input-field';
